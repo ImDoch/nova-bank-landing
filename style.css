@@ -3,7 +3,8 @@
     --live-blue: #2563EB;
     --light-blue: #F0F4FF;
     --dark-grey: #1F2937;
-    --light-grey: #E5E7EB;
+    --light-grey: #6B7280;
+    --soft-grey: #E5E7EB;
     --just-white: #FFFFFF;
     --new-orange: #FF7E67;
     --warm-orange: #EB9B25;
@@ -21,6 +22,12 @@ html {
 }
 body {
     font-size: 1.6rem;
+}
+.secondary-title {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+    color: var(--dark-grey);
 }
 /* estilos del header */
 header {
@@ -90,7 +97,7 @@ header nav {
 }
 .main-hero__content p {
     font-weight: 500;
-    color: #6B7280;
+    color: var(--light-grey);
 }
 .main-hero__content a {
     width: 150px;
@@ -119,22 +126,17 @@ header nav {
     "benefits"
     "testimony";
 }
-/* estilos de la seccion de beneficios */
-.benefits-container {
+.container {
     width: 100%;
     margin: 0 auto;
     padding-top: 40px;
-    grid-area: benefits;
     text-align: center;
 }
-.benefits-container h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 2.2rem;
-    color: var(--dark-grey);
+/* estilos de la seccion de beneficios */
+.container--benefits {
+    grid-area: benefits;
 }
-/* estilos contenedor de tarjetas de beneficios*/
-.benefits-container__cards-container {
+.cards-container {
     width: 90%;
     min-width: 288px;
     margin: 0 auto;
@@ -147,9 +149,10 @@ header nav {
     gap: 30px;
 }
 .cards-container__card {
-    min-width: 290px;
     max-width: 500px;
-    min-height: 200px;
+    min-width: 290px;
+    width: 100%;
+    min-height: 250px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -157,6 +160,8 @@ header nav {
     align-items: center;
     font-size: 1.4rem;
     border-radius: 20px;
+}
+.cards-container__card--benefits {
     background-color: var(--light-blue);
     box-shadow: 5px 6px 5px 0px rgba(37,99,235,0.44);
 }
@@ -165,9 +170,37 @@ header nav {
     height: 24px;
     margin-right: 5px;
 }
+.cards-container__card p {
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--light-grey);
+}
 .cards-container__title {
     display: flex;
     align-items: center;
+}
+.cards-container__title--benefits {
     justify-content: space-around;
 }
-
+.cards-container__title h3{
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--dark-grey);
+}
+/* estilos de la seccion de testimonio */
+.container--testimony {
+    grid-area: testimony;
+    background-color: var(--light-blue);
+}
+.cards-container__card--testimony {
+    padding: 30px;
+    align-items: flex-start;
+    text-align: left; 
+    background-color: var(--just-white);
+    box-shadow: 5px 6px 5px 0px rgba(107,114,128,0.44);
+}
+.cards-container__title--testimony {
+    width: 100%;
+    justify-content: flex-start;
+}
