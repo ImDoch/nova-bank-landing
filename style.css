@@ -27,17 +27,18 @@ body {
     font-size: 2rem;
     font-weight: bold;
     line-height: 2.2rem;
-    color: var(--dark-grey);
+    color: var(--live-blue);
 }
 /* estilos del header */
 header {
     width: 100%;
+    max-width: 1200px;
     height: 60px;
+    margin: 0 auto;
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: var(--light-blue); */
 }
 header img {
     width: 24px;
@@ -52,7 +53,7 @@ header img {
     color: var(--dark-grey);
 }
 header button {
-    padding: 8px 15px;
+    padding: 10px 20px;
     font-weight: bold;
     border: 2px solid var(--live-blue);
     border-radius: 8px;
@@ -75,6 +76,7 @@ header nav {
     width: 100%;
     min-width: 320px;
     max-width: 1200px;
+    margin: 0 auto;
     background-image: linear-gradient(0deg,rgba(37, 99, 235, 1) 0%, rgba(234, 240, 253, 1) 84%, rgba(255, 255, 255, 1) 100%);
 }
 .main-hero__content {
@@ -111,7 +113,7 @@ header nav {
     cursor: pointer;
 }
 .main-hero__content a:hover {
-    border: 3px solid var(--live-blue);
+    outline: 3px solid var(--live-blue);
     background-color: var(--light-blue);
     color: var(--live-blue);
 }
@@ -120,6 +122,7 @@ header nav {
     width: 100%;
     min-width: 320px;
     max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-rows: repeat(2, max-content);
     grid-template-areas: 
@@ -138,7 +141,7 @@ header nav {
 }
 .cards-container {
     width: 90%;
-    min-width: 288px;
+    min-width: 300px;
     margin: 0 auto;
     margin-top: 30px;
     padding-bottom: 50px;
@@ -149,14 +152,14 @@ header nav {
     gap: 30px;
 }
 .cards-container__card {
-    max-width: 500px;
+    max-width: 370px;
     min-width: 290px;
     width: 100%;
     min-height: 250px;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     font-size: 1.4rem;
     border-radius: 20px;
@@ -203,4 +206,105 @@ header nav {
 .cards-container__title--testimony {
     width: 100%;
     justify-content: flex-start;
+}
+/* estilos de la seccion de imagen */
+.background-img-container {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 320px;
+    height: 50vh;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url(./assets/save-money-img.jpg);
+    background-position: center;
+    background-size: cover;
+    color: var(--dark-grey);
+}
+.background-img-container h2 {
+    padding-top: 50px;
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 3.4rem;
+}
+/* Estilos del footer */
+footer {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 320px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--live-blue);
+    color: var(--just-white);
+}
+.footer-content {
+    max-width: 800px;
+    min-width: 288px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-content ul {
+    list-style: none;
+}
+.footer-content a {
+    color: var(--just-white);
+}
+.footer-content__social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+.footer-content__social-media img {
+    width: 32px;
+    height: 32px;
+}
+.footer-content__copy {
+    margin-top: 10px;
+}
+
+/* vista de tablets en adelante */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "testimony benefits";
+    }
+    .mobile-menu-icon {
+        display: none;
+    }
+    .novabank-logo {
+        order: 1;
+    }
+    header button {
+        order: 3;
+    }
+    header nav {
+        order: 2;
+        display: inline-block;
+    }
+    header nav ul {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+    }
+    header nav ul li {
+        padding: 8px;
+        border-radius: 10px;
+        border: 1px solid var(--live-blue);
+        cursor: pointer;
+    }
+    header nav ul li:hover {
+        outline: 2px solid var(--live-blue);
+        background-color: var(--light-blue);
+        cursor: pointer;
+    }
+    header nav ul a {
+        text-decoration: none;
+        color: var(--live-blue)
+    }
+
 }
